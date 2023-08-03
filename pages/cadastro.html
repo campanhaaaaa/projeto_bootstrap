@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <title>Evento anual de Marketing</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark  sticky-top"data-bs-theme ="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Marketing Mundial</a>
+
+        <button class="navbar-toggler" type="button" 
+        data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Cadastro</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link" href="#">Lista de Usuarios</a>
+            </li>
+          </ul>
+          
+        </div>
+      </div>
+    </nav>
+   
+
+    <main class="container bg-light">
+        <h1 class="text-center my-5">Formulário de Cadastro</h1>
+        <form action="#">
+            <!-- CAMPO DE TEXTO:NOME -->
+            <section class="row mb-2">
+                <div class="col-md-12">
+                    <label for="nome" class="mb-2">Nome</label>
+                    <input type="text" id="nome" name="nome" class="form-control">
+
+                </div>
+
+            </section>
+
+            <!-- CAMPO NUMERO E TEXTO: IDADE E ENDEREÇO -->
+            <Section class="row mb-2">
+                <div class="col-md-6">
+                    <label for="idade" class="mb-2">Idade</label>
+                    <input type="number" name="idade" id="idade" class="form-control">
+
+                </div>
+
+                <div class="col-md-3">
+                    <label for="Endereco" class="mb-2">Endereço</label>
+                    <input type="text" name="endereco" id="endereco" class="form-control">
+
+                </div>
+
+            </Section>
+
+            <!-- CAMPO EMAIL: EMAIL -->
+            <section class="row mb-2">
+                <div class="col-md-12">
+                    <label for="email" class="mb-2">Email</label>
+                    <input type="text" id="email" name="email" class="form-control"
+                    placeholder="email@email.com">
+
+                </div>
+
+            </section>
+           
+            <!-- CAMPO TEXTO:CONFIRMAÇÃO DE EMAIL -->
+            <section class="row mb-2">
+                <div class="col-md-12">
+                    <label for="comfirmar" class="mb-2">Confirmação de Email</label>
+                    <input type="text" id="comfirmar" name="comfirmar" class="form-control bg-secondary-subtle"  disabled>
+                    
+                </div>
+
+            </section>
+
+            <!-- CAMPO PASSAWORD: SENHA -->
+            <section class="row mb-2">
+                <div class="col-md-12 input-group">
+                    <label for="senha" class="input-group-text col-form-labe bg-success-subtle">Senha</label>
+                    <input type="password" name="senha" id="senha" class="form-control bg-success-subtle">
+                    <i class="fa-solid fa-eye btn bg-success-subtle fs-5"></i>
+
+                </div>
+
+            </section>
+
+            <!-- CAMPO RADIO -->
+            <Section class="row mb-2 ps-3">
+                <label class="col-form-label-lg" >Qual seu nivel de escolaridade?</label>
+                <div class="form-check">
+                    <input type="radio" name="escolaridade" id="fundamental" value="fundamental" class="form-check-input">
+                    <label for="fundamental" class="form-check-label">Fundamental</label>
+
+                </div>
+                <div class="form-check">
+                    <input type="radio" name="escolaridade" id="medio" value="medio" class="form-check-input">
+                    <label for="medio" class="form-check-label">Medio</label>
+
+                </div>
+                <div class="form-check">
+                    <input type="radio" name="escolaridade" id="superior" value="superior" class="form-check-input">
+                    <label for="superior" class="form-check-label">Superior</label>
+
+                </div>
+              
+                
+            </Section>
+            <div class="col-md-6 mx-auto mb-2">
+              <button class="btn btn-primary col-12 ">verificar escolaridade</button>
+            </div>
+
+
+
+           <!-- CAMPO SWITCH: TERMOS DE CONTRATO -->
+           <div class="alert alert-warning mt-2">
+            <p>Você aceita os termos do contrato</p>
+           </div>
+
+           <section class="form-check form-switch">
+            <input type="checkbox" name="escolha" id="escolha" value="escolha"
+            class="form-check-input">
+            <label for="escolha" class="form-check-label">Exibir termos do contrato</label>
+           </section>
+
+           <!-- INFO DO CONTRATO -->
+           <section class="p-5 mt-3" id="contrato">
+            <div class="container-fluid">
+              <h1>Termos do Contratos</h1>
+              <p class="lead altura">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum provident dolore optio beatae amet? Commodi, excepturi totam nobis facere dolores laudantium maxime iusto sequi incidunt possimus molestias quam alias ratione!
+                Atque vitae quam tempore quas veritatis architecto commodi magnam nam, natus asperiores eos eveniet voluptatem? Eum autem quos suscipit? Laborum nemo ea fuga eaque, rerum soluta quaerat harum optio. Magni.
+                Adipisci laborum dicta excepturi omnis. Dolores sapiente reprehenderit in delectus obcaecati? Delectus accusantium rerum ad enim neque expedita laboriosam repudiandae iusto perspiciatis? Ea, quia commodi? Ex aut aspernatur quis dolorem.
+                Non, provident? Aperiam expedita cupiditate minus delectus corporis dolor corrupti voluptas quo a ipsum quia, quasi laboriosam excepturi voluptate nobis cumque veniam tempore non iusto, pariatur aliquid recusandae. Doloremque, quisquam!
+                Quidem ex officia dignissimos eos quis exercitationem aliquid vel! Voluptates repellat dolore dolores magnam sequi laudantium deserunt molestias. Dolores beatae reiciendis sed amet, omnis similique! Dolorem labore ducimus non fuga.
+                Mollitia inventore ea exercitationem obcaecati voluptates reprehenderit sapiente. Cumque laboriosam aliquid provident vitae velit, omnis ipsam debitis modi praesentium, quibusdam quo. Neque nam, molestiae omnis deleniti iste praesentium explicabo quasi!
+                Sit odio dicta quam quos repellendus! Harum numquam corrupti, repellendus nesciunt odit architecto officia voluptatibus libero a enim voluptatum ipsum, dignissimos, quae eius culpa! Voluptas incidunt pariatur accusantium ipsam totam.
+                Quia, fugiat. Fugit blanditiis facilis vero veniam deleniti officia voluptatibus adipisci laudantium! Nemo voluptatum rem quas unde reprehenderit enim omnis ducimus! Quam, porro? Commodi modi, adipisci eius perspiciatis harum illo?
+                In distinctio at alias, omnis aspernatur quas officia inventore laboriosam repellat odit exercitationem ratione pariatur facere dolorum vero beatae accusantium voluptatem animi! Assumenda cupiditate dolore repellendus libero ducimus dignissimos autem!
+                Dolores doloribus dolorum quae ab qui soluta corporis odio cupiditate, id porro, quisquam deserunt iste obcaecati ex, consectetur hic voluptas magni saepe nulla autem optio incidunt. Eos numquam quos dolores!
+
+              </p>
+
+              <hr>
+
+              <div class="form-check">
+                <input type="checkbox" name="concordo" id="concordo" value="concordo" class="form-check-input">
+                <label for="concordo" class="form-check-label">Concordo</label>
+              </div>
+            </div>
+           </section>
+
+           <!-- CAMPO SELECT -->
+           <section class="row mb-2">
+            <label for="" class="col-form-label-lg">Em qual setor gostaria de trabalhar</label>
+            <select name="trabalho" class="form-select">
+              <option value="">Escolha uma opção...</option>
+              <option value="RH">RH</option>
+              <option value="Tecnologia">Tecnologia</option>
+              <option value="Financeiro">Financeiro</option>
+            </select>
+
+           </section>
+
+           <!-- CAMPO TEXTAREA: COMENTÁRIO -->
+           <section class="row mb-2">
+            <div class="col-md-12">
+              <label for="mensagem" class="mb-2">Comente sobre o setor escolhido</label>
+              <textarea name="mensagem" id="mensagem" placeholder="descreva brevemente sua opinião" class="form-control"></textarea>
+
+            </div>
+
+           </section>
+
+           <!-- COMPO DE COR -->
+           <section class="row mb-2">
+            <label for="cor" class="col-md-4">Escolha uma cor para o site</label>
+            <input type="color" name="cor" id="cor" class="col-md-8 p-0">
+
+           </section>
+           <div class="col-md-6 max-auto my-5">
+            <button type="submit" class="btn btn-primary col-12">Enviar Formulário</button>
+           </div>
+          
+           
+        </form>
+     
+    </main>
+
+    <footer class="conteiner-fluid bg-dark text-white py-3" >
+
+      <section class="row">
+
+        <div class="col-md-9">
+          <p>&copy;2023 Marketing Mundial <a href="#">Privaciadade</a> <a href="#">Politicas</a></p>
+        </div>
+
+        <div class="col-md-3">
+          <!-- ICONES REDES SOCIAIS -->
+          <div class="fs-5 d-flex justify-content-around social">
+            <a href="#" class="text-white"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="text-white"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="text-white"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="text-white"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" class="text-white"><i class="fa-brands fa-facebook"></i></a>
+          </div>
+        </div>
+
+      </section>
+    </footer>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>  
+</body>
+</html>
