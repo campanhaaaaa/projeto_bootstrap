@@ -31,3 +31,7 @@
     height: 300px;
     overflow: scroll;
 }
+
+.fonte{
+    font-family: 'Borel', cursive;
+}
