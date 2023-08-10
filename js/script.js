@@ -35,15 +35,21 @@ idade.addEventListener("blur", function(){
 let endereco = document.querySelector("input[name=endereco]")
 endereco.addEventListener("blur",function(){
     console.log(endereco.value.length)
-    if(endereco.value.length >= 35){
-       
-        endereco.style.border = "2px solid red" 
-        alert("vc ultrapassou a quantitade de letra")
+
+    if(endereco.value != ""){
+
+        if(endereco.value.length >= 35){
+           
+            alert("vc ultrapassou a quantitade de letra")
+            endereco.style.border = "2px solid red" 
+           
+        }
+        else{
+            alert("ok")
+            endereco.style.border = "2px solid yellow"
+        }
     }
-    else{
-        alert("ok")
-        endereco.style.border = "2px solid yellow"
-    }
+
 
 })
 
@@ -100,5 +106,100 @@ btnEscolaridade.addEventListener("click",(evento)=>{
     //console.log(evento)
     evento.preventDefault()// esta função irá inpedir o comportamento padrão do botão
 
-    console.log(escolaridade[1])
+    // console.log(escolaridade[1])
 })
+for(let itens of escolaridade){
+    //console.log(itens)
+    if(itens.checked){
+        alert(`Sua Escolaridade é ${itens.value}`)// isto é um template string, ou outra forma de concatenar
+        //confirm("Tem Certeza?")
+        //console.log(opcao)
+    }
+
+}
+
+let escolha = document.querySelector("#escolha")
+let contrato = document.querySelector("#contrato")
+
+contrato.classList.add("d-none")
+
+escolha.addEventListener("chage", ()=>{
+    if(escolha.checked){
+        contrato.classList.remove("d-none")
+        contrato.classList.add("d-block")
+    }
+    else{
+        contrato.classList.add("d-block")
+        contrato.classList.remove("d-none")  
+    }
+
+    
+})
+
+let concordo = document.querySelector("#concordo")
+
+    concordo.addEventListener("click", ()=>{
+    if(concordo.checked){
+        alert("Obg pela escolha")
+    }
+
+    else{
+        alert("carai que pena meu peixe")
+        let mensagem = prompt("Diga porque voce desmarcou")
+        // criar uma caixa de texto
+    }
+})
+
+let trabalho = document.querySelector(".form-select")
+
+trabalho.addEventListener("change", ()=>{
+    //console.log(trabalho.options)
+
+    for(let itens of trabalho){
+        if(itens.selected){
+       // console.log(itens.value)
+       if(itens.value == "RH"){
+        trabalho.style.backgroundColor = "cyan"
+        }
+
+       if(itens.value == "Tecnologia"){
+        trabalho.style.backgroundColor = "brown"
+        }
+
+       if(itens.value == "Financeiro"){
+        trabalho.style.backgroundColor = "purple"
+        }
+    }
+}
+
+            
+        
+})
+
+let cor = document.querySelector("#cor")
+cor.addEventListener("change", ()=>{
+    console.log(cor.value)
+    document.body.style.backgroundColor = cor.value
+})
+
+let mensagem = document.querySelector("#mensagem")
+let restante = document.querySelector("#restante")
+
+
+let limite = 20
+mensagem.addEventListener("keyup", ()=>{
+    //console.log(mensagem.value.length)
+    restante.textContent = mensagem.value.length
+
+    mensagem.setAttribute("maxlength", limite)
+    console.log(restante.parentNode)
+    if(restante.textContent == 20){
+        mensagem.classList.add("border-danger")
+        restante.parentNode.style.color = "red" //parentNode significa que estamos pegando o elemento(nó da árvore DOM) pai
+    }
+    else{
+        mensagem.classList.remove("border-danger")
+        restante.parentNode.style.color = "black"
+    }
+})
+
